@@ -36,7 +36,7 @@ namespace WeddingMVC.Controllers
         {
             ViewData["listOfIsExist"] = new[] {
                                             new SelectListItem {Text = "Да", Value = "True"},
-                                            new SelectListItem {Text = "Да ДА", Value = "False"}
+                                            new SelectListItem {Text = "Да", Value = "False"}
                                         };
             ViewData["listOfSize"] = Enumerable.Range(25, 24)
                                                .Select(age => Convert.ToString(age, CultureInfo.InvariantCulture))

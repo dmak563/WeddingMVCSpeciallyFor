@@ -30,7 +30,8 @@ namespace WeddingMVC.Models
         [Display(Name = "Размер обуви")]
         public int FootSize { get; set; }
         [MaxLength(250)]
-        [Required, Display(Name = "Почему кактус колючий ?")]
+
+        [Required, DataType(DataType.MultilineText), Display(Name = "Почему кактус колючий ?")]
         public string WhyIsCactusPrickly { get; set; }
         [MaxLength(50), Display(Name = "Желтый или зеленый ?")]
         public string YellowOrGreen { get; set; }
