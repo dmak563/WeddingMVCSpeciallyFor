@@ -88,7 +88,7 @@ body {
 
      width: 70%;
      max-height: 50px;
-     min-width: 620px;
+     min-width: 480px;
     -moz-box-shadow: 4px 4px 10px black; /* Для Firefox */
     -webkit-box-shadow: 4px 4px 10px black; /* Для Safari и Chrome */
      box-shadow: 4px 4px 10px black; /* Параметры тени */
