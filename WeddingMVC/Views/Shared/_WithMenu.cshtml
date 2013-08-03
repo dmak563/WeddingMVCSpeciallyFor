@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        @Styles.Render("~/Content/Site.css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    
+    <body>
+        @RenderBody()
+        
+        <div id="shapka-aboute">
+            <a href="#" class="shapkaLink">
+                <h2>
+                    @Html.ActionLink("Денис и Алена", "Index", "Home")
+                </h2>
+            </a>
+            <div><img src="../../Content/images/shapka.png" id="shapkaImg"/></div>
+        </div>
+
+        <div id="menu">
+            <div id="menu1">
+                <h3 class="forMenu">
+                    @Html.ActionLink("На главную", "Index", "Home")
+                </h3>
+            </div>
+            
+            <div id="menu2">
+                <h3 class="forMenu">
+                    @Html.ActionLink("Где и когда?", "Location", "Home")
+                </h3>
+            </div>
+            
+            <div id="menu3">
+                <h3 class="forMenu">
+                    @Html.ActionLink("Хочу пойти!", "Quiz","Home")
+                </h3>
+            </div>
+        </div>
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
+
+

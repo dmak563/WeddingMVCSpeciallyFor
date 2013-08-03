@@ -1,0 +1,127 @@
+﻿@model WeddingMVC.Models.Quiz
+@{
+    ViewBag.Title = "Хочу пойти!";
+    Layout = "~/Views/Shared/_WithMenu.cshtml";
+}
+
+<div id="content">
+    @using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+        
+        <div style="display: none">
+            <input type="text" name="honeyspot"/>
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fio)
+        </div>
+        
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fio)
+            @Html.ValidationMessageFor(model => model.Fio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsExist)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.IsExist, (IEnumerable<SelectListItem>) ViewData["listOfIsExist"])
+            @Html.ValidationMessageFor(model => model.IsExist)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FavouriteColor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FavouriteColor)
+            @Html.ValidationMessageFor(model => model.FavouriteColor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FavouriteSong)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FavouriteSong)
+            @Html.ValidationMessageFor(model => model.FavouriteSong)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Blood)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Blood)
+            @Html.ValidationMessageFor(model => model.Blood)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PopcornIsCool)
+        </div>
+        <div class="editor-field">
+            @Html.RadioButtonFor(model => model.PopcornIsCool, true, new { id = "PopcornIsCoolYes" })
+            @Html.Label("PopcornIsCoolYes", "Yes", new { @class = "checkbox" })
+            @Html.RadioButtonFor(model => model.PopcornIsCool, false, new { id = "PopcornIsCoolNo" })
+            @Html.Label("PopcornIsCoolNo", "No", new { @class = "checkbox" })
+            @Html.ValidationMessageFor(model => model.PopcornIsCool)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FootSize)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.FootSize, (IEnumerable<SelectListItem>) ViewData["listOfSize"]) 
+            @Html.ValidationMessageFor(model => model.FootSize)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WhyIsCactusPrickly)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WhyIsCactusPrickly)
+            @Html.ValidationMessageFor(model => model.WhyIsCactusPrickly)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.YellowOrGreen)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.YellowOrGreen)
+            @Html.ValidationMessageFor(model => model.YellowOrGreen)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CapitalOfBrazil)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CapitalOfBrazil)
+            @Html.ValidationMessageFor(model => model.CapitalOfBrazil)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AboutUs)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AboutUs)
+            @Html.ValidationMessageFor(model => model.AboutUs)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Joke)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Joke)
+            @Html.ValidationMessageFor(model => model.Joke)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+}
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

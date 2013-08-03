@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Результаты отправки";
+    Layout = "~/Views/Shared/_WithMenu.cshtml";
+    var message = Convert.ToString(TempData["Thanks"]);
+}
+
+@if (!string.IsNullOrWhiteSpace(message))
+{
+    <div id="content">
+        <h3 class="userMassage">@message</h3>
+    </div>
+}
