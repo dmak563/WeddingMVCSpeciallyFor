@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WeddingMVC.Models
 {
@@ -13,48 +12,38 @@ namespace WeddingMVC.Models
         }
 
         [MaxLength(50)]
-        [DisplayName("Ваше ФИО")]
+        [Required, Display(Name = "ФИО")]
         public string Fio { get; set; }
-
-        [DisplayName("Сможете ли вы прийти на нашу свадьбу?")]
+        [Display(Name = "Сможете ли вы присутсвовать на нашей свадьбе?")]
         public bool IsExist { get; set; }
-
         [MaxLength(20)]
-        [DisplayName("Ваш любимый цвет")]
+        [Required, Display(Name = "Любимый цвет")]
         public string FavouriteColor { get; set; }
-
         [MaxLength(30)]
-        [DisplayName("Любимая песня или исполнитель вашей молодости(детства)")]
+        [Required, Display(Name = "Любимая песня или исполнитель молодости(детства)")]
         public string FavouriteSong { get; set; }
-
-        [MaxLength(5)]
-        [DisplayName("Ваша группа крови")]
+        [MaxLength(5), Display(Name = "Группа крови")]
         public string Blood { get; set; }
-
-        [DisplayName("Любите ли вы попкорн?")]
+        [Display(Name = "Попкорн ням-ням ?")]
         public bool PopcornIsCool { get; set; }
-
-        [DisplayName("Ваш размер обуви")]
+        [Required]
+        [Display(Name = "Размер обуви")]
         public int FootSize { get; set; }
-
-        [MaxLength(250)] 
-        [DisplayName("Почему кактус колючий?")]
+        [MaxLength(250)]
+        [Required, Display(Name = "Почему кактус колючий ?")]
         public string WhyIsCactusPrickly { get; set; }
-
-        [MaxLength(50)]
-        [DisplayName("Желтый или зеленый?")]
+        [MaxLength(50), Display(Name = "Желтый или зеленый ?")]
         public string YellowOrGreen { get; set; }
-        
         [MaxLength(50)]
-        [DisplayName("Столица Бразилии?")]
+        [Required, Display(Name = "Столица Бразилии")]
         public string CapitalOfBrazil { get; set; }
-        
         [MaxLength(5000)]
-        [DisplayName("Несколько слов о нас")]
+        [Required]
+        [DataType(DataType.MultilineText), Display(Name = "Несколько слов о нас")]
         public string AboutUs { get; set; }
-
         [MaxLength(5000)]
-        [DisplayName("Смешной случай или воспоминания связанные с женихом/невестой")]
+        [Required]
+        [DataType(DataType.MultilineText), Display(Name = "Смешной случай или воспоминания связанные с женихом/невестой")]
         public string Joke { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
@@ -33,14 +34,20 @@ namespace WeddingMVC.Controllers
 
         public ActionResult Quiz()
         {
-            ViewData["listOfIsExist"] = new [] {
-                                            new SelectListItem {Text = "Yes", Value = "True"},
-                                            new SelectListItem {Text = "Yes Yes", Value = "False"}
+            ViewData["listOfIsExist"] = new[] {
+                                            new SelectListItem {Text = "Да", Value = "True"},
+                                            new SelectListItem {Text = "Да ДА", Value = "False"}
                                         };
             ViewData["listOfSize"] = Enumerable.Range(25, 24)
                                                .Select(age => Convert.ToString(age, CultureInfo.InvariantCulture))
-                                               .Select(age => new SelectListItem {Text = age, Value = age})
+                                               .Select(age => new SelectListItem { Text = age, Value = age })
                                                .ToList();
+            var blood = new List<string> { "I+", "I-", "II-", "II+", "III-", "III+", "IV-", "IV+" };
+            ViewData["listOfBlood"] = blood.Select(x => new SelectListItem { Text = x, Value = x });
+            ViewData["colours"] = new[] {
+                                            new SelectListItem {Text = "Зеленый", Value = "Зеленый"},
+                                            new SelectListItem {Text = "Желтый", Value = "Желтый"}
+                                        };
             return View(new Quiz());
         }
 

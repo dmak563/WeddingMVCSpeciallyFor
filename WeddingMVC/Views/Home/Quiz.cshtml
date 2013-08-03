@@ -51,7 +51,7 @@
             @Html.LabelFor(model => model.Blood)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Blood)
+            @Html.DropDownListFor(model => model.Blood,  (IEnumerable<SelectListItem>) ViewData["listOfBlood"])
             @Html.ValidationMessageFor(model => model.Blood)
         </div>
 
@@ -60,9 +60,9 @@
         </div>
         <div class="editor-field">
             @Html.RadioButtonFor(model => model.PopcornIsCool, true, new { id = "PopcornIsCoolYes" })
-            @Html.Label("PopcornIsCoolYes", "Yes", new { @class = "checkbox" })
+            @Html.Label("PopcornIsCoolYes", "Ага", new { @class = "checkbox" })
             @Html.RadioButtonFor(model => model.PopcornIsCool, false, new { id = "PopcornIsCoolNo" })
-            @Html.Label("PopcornIsCoolNo", "No", new { @class = "checkbox" })
+            @Html.Label("PopcornIsCoolNo", "Неа", new { @class = "checkbox" })
             @Html.ValidationMessageFor(model => model.PopcornIsCool)
         </div>
 
@@ -115,7 +115,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Отправить" />
         </p>
 }
 </div>

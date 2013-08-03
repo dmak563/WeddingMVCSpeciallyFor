@@ -8,6 +8,13 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'nicoletta';
+    src : url('Nicoletta_script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size: large;
+}
+@font-face {
     font-family: 'airport';
     src: url('airport.eot');
     src: url('airport.eot?#iefix') format('embedded-opentype'),
@@ -152,10 +159,10 @@ a:hover {
 
 h1 {
     margin-top: 200px;
-    font-family: Lobster, Tahoma;
+    font-family: Nicoletta, Tahoma;
     z-index: 3;
     color: #bebccf;
-    font-size: 70px;
+    font-size: 90px;
     font-weight: 400;
 	line-height: 1em;
 	letter-spacing: 0em;
@@ -163,10 +170,10 @@ h1 {
 }
 
 h2 {
-    font-family: Lobster, Tahoma;
+    font-family: Nicoletta, Tahoma;
     z-index: 3;
     color: #bebccf;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 400;
 	line-height: 1em;
 	letter-spacing: 0em;
@@ -207,3 +214,31 @@ ul li {
 .editor-label {
     padding-top: 1%; 
 }
+/* styles for validation helpers */
+.field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
