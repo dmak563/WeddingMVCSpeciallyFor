@@ -90,7 +90,6 @@ namespace WeddingMVC.Controllers
                 };
                 mail.To.Add("dmak563@gmail.com");
                 mail.To.Add("alyonabazhanova@gmail.com");
-				mail.To.Add("andreybazhanov@rambler.ru");
                 smtp.Send(mail);
             }
             catch (Exception ex)
