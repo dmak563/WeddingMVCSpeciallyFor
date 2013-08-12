@@ -61,7 +61,7 @@ namespace WeddingMVC.Controllers
             else
             {
                 var isSent = SendQuizResultToEmail(quiz);
-                TempData["Thanks"] = isSent ? "Спасибки, всем чмоки!" : "Простите, но результаты не сохранились, пожалуйста сообщите об этом Денису или Алёне. :(";
+                TempData["Thanks"] = isSent ? "Спасибо за внимание!" : "Простите, но результаты не сохранились, пожалуйста сообщите об этом Денису или Алёне. :(";
             }
 
             return RedirectToAction("MassageToUser");
